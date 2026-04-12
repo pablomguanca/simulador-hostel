@@ -1,0 +1,42 @@
+@use "variables" as v;
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    color: v.$text-main;
+    justify-items: center;
+    border-top: 1px solid v.$border-glow;
+    padding: 1rem;
+    gap: 1rem;
+
+    @include v.tablet {
+        grid-template-columns: 1fr;
+    }
+
+    @include v.mobile {
+        grid-template-columns: 1fr;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1rem;
+        padding-left: 0;
+        margin: 0;
+        list-style: none;
+
+        .social-icon {
+            display: block;
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+    }
+}

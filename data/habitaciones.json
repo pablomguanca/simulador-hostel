@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "nombre": "Nazare Room",
+        "tipo": "privada",
+        "ambiente": "silencio",
+        "prioridad": "comodidad",
+        "precio": 45,
+        "recomendacion": "Ideal si querés descansar y tener tu espacio. Vista al mar incluida.",
+        "imagenes": [
+            "assets/img/nazare-1.webp",
+            "assets/img/nazare-2.webp"
+        ],
+        "ficha": {
+            "wifi": "Fibra óptica",
+            "camas": "1 Queen Size",
+            "vista": "Al mar",
+            "capacidad": 2
+        }
+    },
+    {
+        "id": 2,
+        "nombre": "Portuguese Room",
+        "tipo": "privada",
+        "ambiente": "silencio",
+        "prioridad": "precio",
+        "precio": 28,
+        "recomendacion": "Perfecta si querés privacidad gastando lo mínimo.",
+        "imagenes": [
+            "assets/img/portuguese-1.webp",
+            "assets/img/portuguese-2.webp"
+        ],
+        "ficha": {
+            "wifi": "Alta velocidad",
+            "camas": "1 Matrimonial",
+            "vista": "Interior",
+            "capacidad": 2
+        }
+    },
+    {
+        "id": 3,
+        "nombre": "Australian Room",
+        "tipo": "compartida",
+        "ambiente": "social",
+        "prioridad": "precio",
+        "precio": 15,
+        "recomendacion": "Buena para conocer gente y ahorrar. ¡El ambiente es increíble!",
+        "imagenes": [
+            "assets/img/australian-1.webp",
+            "assets/img/australian-3.webp"
+        ],
+        "ficha": {
+            "wifi": "Comunitario",
+            "camas": "3 Cuchetas (6 camas)",
+            "vista": "Al jardín",
+            "capacidad": 6
+        }
+    },
+    {
+        "id": 4,
+        "nombre": "Hawaiian Room",
+        "tipo": "compartida",
+        "ambiente": "social",
+        "prioridad": "comodidad",
+        "precio": 22,
+        "recomendacion": "Más cómoda y con buen ambiente para socializar. Vista al mar.",
+        "imagenes": [
+            "assets/img/hawaiian-1.webp",
+            "assets/img/hawaiian-2.webp"
+        ],
+        "ficha": {
+            "wifi": "Alta velocidad",
+            "camas": "2 Cuchetas Premium (4 camas)",
+            "vista": "Al mar",
+            "capacidad": 4
+        }
+    }
+]

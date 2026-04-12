@@ -1,0 +1,66 @@
+@use 'variables' as v;
+
+.swal-custom-popup {
+    background-color: v.$fondo-main;
+    border: 3px solid v.$primary-hover;
+    border-radius: 15px;
+    font-family: v.$font-body;
+    box-shadow: 0 10px 30px v.$border-glow;
+}
+
+.swal-custom-title {
+    font-family: v.$font-titles;
+    color: v.$primary-color;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.swal-custom-html {
+    color: v.$white;
+    line-height: 1.5;
+
+    strong {
+        font-family: v.$font-titles;
+        font-size: 1.2rem;
+        color: v.$primary-color;
+    }
+}
+
+.swal-custom-confirm {
+    background-color: v.$primary-color;
+    color: v.$white;
+    border-radius: 50px;
+    padding: 0.7rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid v.$border-shadow;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(0.95);
+        background-color: v.$primary-color;
+        color: v.$white;
+        background-color: v.$accent-hover;
+        color: v.$text-dark;
+    }
+}
+
+.swal2-icon.swal2-info {
+    border-color: v.$accent-color;
+    color: v.$accent-color;
+}
+
+.swal2-icon.swal2-success {
+    border-color: v.$border-glow;
+    background-color: transparent;
+
+    [class^='swal2-success-line'] {
+        display: block;
+        z-index: 2;
+    }
+
+    .swal2-success-ring {
+        border-color: v.$border-glow;
+    }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surfer Hostel - Encontrá tu habitación ideal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="./assets/logo/favicon_surfer.webp" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <div id="loader" class="loader">
+        <div class="loader__spinner"></div>
+        <p>Cargando habitaciones...</p>
+    </div>
+
+    <div id="error-container" class="error-toast" role="alert"></div>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <div class="site-header__brand">
+                <a href="./index.html"><img src="./assets/logo/logo_coffee_waves_header.webp" alt="Surfer Hostel Logo"
+                        class="site-header__logo-img"></a>
+            </div>
+            <button class="btn btn--outline" id="btn-toggle-historial">
+                📋 Mi historial
+            </button>
+        </div>
+    </header>
+
+    <main id="app">
+        <section class="hero">
+            <div class="hero__content">
+                <span class="hero__eyebrow">🌊 Simulador de habitaciones</span>
+                <h1 class="hero__titulo">
+                    Encontrá tu habitación <span>ideal</span>
+                </h1>
+                <p class="hero__subtitulo">
+                    Respondé 3 preguntas y te hacemos el match perfecto con la habitación que más se ajusta a vos.
+                </p>
+            </div>
+        </section>
+
+        <div id="banner-ultima-vista" class="banner-ultima-vista"></div>
+
+        <section class="seccion-form">
+            <form id="form-simulador" novalidate>
+                <div class="form-step">
+                    <label class="form-label" for="ambiente">¿Qué ambiente preferís?</label>
+                    <div class="form-select-wrapper">
+                        <select id="ambiente" required>
+                            <option value="silencio">🤫 Silencio y tranquilidad</option>
+                            <option value="social">🎉 Social - conocer gente</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-step">
+                    <label class="form-label" for="prioridad">¿Qué priorizás?</label>
+                    <div class="form-select-wrapper">
+                        <select id="prioridad" required>
+                            <option value="precio">💸 El mejor precio</option>
+                            <option value="comodidad">🛋️ Máxima comodidad</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-step">
+                    <label class="form-label" for="tipo">¿Tipo de habitación?</label>
+                    <div class="form-select-wrapper">
+                        <select id="tipo" required>
+                            <option value="privada">🔐 Privada</option>
+                            <option value="compartida">🤝 Compartida</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--full">
+                    Buscar mi habitación 🌊
+                </button>
+            </form>
+        </section>
+
+        <section id="resultados">
+            <div id="match-container"></div>
+            <div id="sugerencias-container"></div>
+        </section>
+    </main>
+
+    <aside id="panel-historial" class="panel-historial">
+        <div class="panel-historial__header">
+            <h2>Mis búsquedas 📋</h2>
+            <button class="btn btn--outline" id="btn-cerrar-historial">✕</button>
+        </div>
+        <div id="historial-lista" class="historial-lista"></div>
+        <button class="btn btn--outline btn--full" id="btn-limpiar-historial">
+            🗑️ Limpiar historial
+        </button>
+    </aside>
+    <div id="panel-overlay" class="panel-overlay"></div>
+
+    <div id="modal-overlay" class="modal-overlay"></div>
+
+    <div id="modal-reserva" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <div class="modal__header">
+            <h2 id="modal-titulo">Confirmar reserva 🏄‍♂️</h2>
+            <button class="modal__cerrar" id="btn-cerrar-modal" aria-label="Cerrar">✕</button>
+        </div>
+
+        <form id="form-reserva" novalidate>
+            <div class="modal__detalle">
+                <p>Habitación: <strong id="reserva-habitacion"></strong></p>
+                <p>Precio: <strong id="reserva-precio"></strong></p>
+            </div>
+
+            <div class="form-step">
+                <label class="form-label" for="reserva-nombre">Nombre completo</label>
+                <input type="text" id="reserva-nombre" class="form-input" placeholder="Tu nombre" autocomplete="name">
+            </div>
+
+            <div class="form-step">
+                <label class="form-label" for="reserva-email">Correo electrónico</label>
+                <input type="email" id="reserva-email" class="form-input" placeholder="tu@email.com"
+                    autocomplete="email">
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">
+                Confirmar reserva ✅
+            </button>
+        </form>
+    </div>
+
+    <footer>
+        <h3>Coffee & Waves Hostel Surfer</h3>
+        <h3>By Pablo Guanca</h3>
+        <nav class="bloque-nav">
+            <ul class="social-links">
+                <li>
+                    <a href="https://instagram.com" target="_blank">
+                        <img class="social-icon" src="./assets/logo/instagram_logo.webp" alt="logo instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://facebook.com" target="_blank">
+                        <img class="social-icon" src="./assets/logo/logo_face.webp" alt="logo facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com" target="_blank">
+                        <img class="social-icon" src="./assets/logo/linkedin_logo.webp" alt="logo linkedin">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

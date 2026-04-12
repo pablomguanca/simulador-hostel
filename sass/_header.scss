@@ -1,0 +1,31 @@
+@use 'variables' as v;
+
+.site-header {
+    padding: 0.8rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1.5px solid v.$border-glow;
+    background-color: #0a2342f0;
+    backdrop-filter: blur(6px);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo-img {
+        height: 70px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+    }
+}

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:wght@400..900&display=swap');
+
+$font-titles: 'Playfair Display', sans-serif;
+$font-body: 'DM Sans', sans-serif;
+$fondo-main: #0a2342;
+$fondo-secondary: #061a33;
+$fondo-card: rgba(255, 255, 255, 0.05);
+$primary-color: #06d6a0;
+$primary-hover: #05b386;
+$accent-color: #ff8819;
+$accent-hover: #d97706;
+$text-main: #f0f9ff;
+$text-muted: rgba(240, 249, 255, 0.7);
+$text-dark: #061a33;
+$white: #FFFFFF;
+$error-color: #ff4d4d;
+$soft-grey: #dadada;
+$dark-grey: #c0c0c0;
+$border-glow: rgba(6, 214, 160, 0.2);
+$border-shadow: rgba(0, 0, 0, 0.4);
+$overlay: rgba(0, 0, 0, 0.75);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-body;
+}
+
+@mixin tablet {
+    @media (min-width: 600px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: 320px) and (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin flex ($fd, $jc, $ai) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin title ($c, $fs, $ta, $tt) {
+    color: $c;
+    font-family: $font-titles;
+    font-size: $fs;
+    text-align: $ta;
+    text-transform: $tt;
+}
+
+@mixin principal-section ($bg, $mh, $fd, $jc, $ai, $p) {
+    display: flex;
+    background-color: $bg;
+    min-height: $mh;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    padding: $p;
+}
+
+%btn-primary {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    margin: 1rem;
+    background-color: $accent-color;
+    color: $text-dark;
+    border-radius: 50px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    border: 1px solid $border-shadow;
+    box-shadow: 0 2px 3px -1px $text-muted;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+%btn-primary:hover {
+    transform: scale(0.95);
+    background-color: $border-glow;
+    color: $white;
+}
