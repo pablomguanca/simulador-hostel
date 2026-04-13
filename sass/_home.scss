@@ -35,11 +35,11 @@ body {
         margin-bottom: 1rem;
 
         @include v.tablet {
-            font-size: 2rem;
+            font-size: 2.4rem;
         }
 
         @include v.mobile {
-            font-size: 2rem;
+            font-size: 2.2rem;
         }
 
         span {
@@ -61,7 +61,7 @@ body {
 }
 
 .seccion-form {
-    max-width: 800px;
+    max-width: 500px;
     margin: -50px auto 3rem;
     padding: 2rem;
     background: rgba(26, 74, 122, 0.45);
