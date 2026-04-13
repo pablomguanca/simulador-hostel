@@ -125,6 +125,10 @@ body {
     padding: 2rem 0;
     max-width: 1200px;
     margin: 0 auto;
+
+    @include v.mobile {
+        padding: 0.8rem;
+    }
 }
 
 .match-wrapper {
@@ -148,6 +152,26 @@ body {
     .card {
         max-width: 100%;
         border: 2px solid v.$accent-color;
+    }
+}
+
+.sugerencias-header {
+
+    @include v.flex (column, center, center);
+    padding: 0.8rem;
+
+    @include v.mobile {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-family: 'Playfair Display';
+        font-size: 1.5rem;
+        color: v.$accent-color;
+    }
+
+    p {
+        color: v.$text-main;
     }
 }
 
