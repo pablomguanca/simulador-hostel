@@ -52,6 +52,7 @@ body {
     &__subtitulo {
         color: v.$text-muted;
         max-width: 600px;
+        margin-bottom: 1rem;
 
         @include v.mobile {
             font-size: 1rem;
